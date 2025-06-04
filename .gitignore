@@ -51,3 +51,79 @@ site
 
 # E2E test reports
 e2e-test-report/
+
+# Production builds
+/packages/*/dist
+/packages/*/build
+/dist
+/build
+dist-types/
+
+# Environment variables
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary folders
+tmp/
+temp/
+
+# Backstage specific
+/packages/backend/dist
+/packages/app/dist
+/packages/*/node_modules
+
+# TechDocs
+/site
+
+# Database files (for local development)
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+.dockerignore
+
+# Yarn
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# Azure specific (don't commit secrets)
+azure-credentials.json
+service-principal.json
+
+# Local configuration
+app-config.local.yaml
+app-config.*.local.yaml

@@ -132,22 +132,22 @@ azureDevOps:
   token: ${AZURE_TOKEN}
   organization: ${AZURE_ORG}
 
-# Kubernetes configuration for Azure AKS
-kubernetes:
-  serviceLocatorMethod:
-    type: 'multiTenant'
-  clusterLocatorMethods:
-    - type: 'config'
-      clusters:
-        - url: ${AZURE_K8S_CLUSTER_URL}
-          name: azure-aks-cluster
-          authProvider: 'azure'
-          skipTLSVerify: false
-          skipMetricsLookup: false
-          # Azure AKS authentication
-          serviceAccountToken: ${AZURE_K8S_TOKEN}
-          dashboardUrl: ${AZURE_K8S_DASHBOARD_URL}
-          dashboardApp: kubernetes-dashboard
+# Kubernetes configuration for Azure AKS (uncomment when AKS cluster is available)
+# kubernetes:
+#   serviceLocatorMethod:
+#     type: 'multiTenant'
+#   clusterLocatorMethods:
+#     - type: 'config'
+#       clusters:
+#         - url: ${AZURE_K8S_CLUSTER_URL}
+#           name: azure-aks-cluster
+#           authProvider: 'azure'
+#           skipTLSVerify: false
+#           skipMetricsLookup: false
+#           # Azure AKS authentication
+#           serviceAccountToken: ${AZURE_K8S_TOKEN}
+#           dashboardUrl: ${AZURE_K8S_DASHBOARD_URL}
+#           dashboardApp: kubernetes-dashboard
 
 # see https://backstage.io/docs/permissions/getting-started for more on the permission framework
 permission:
